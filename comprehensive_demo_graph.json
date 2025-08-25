@@ -1,0 +1,21 @@
+{
+  "nodes": [],
+  "edges": [],
+  "graph_stats": {
+    "total_nodes": 0,
+    "total_edges": 0,
+    "density": 0,
+    "connected_components": 0
+  },
+  "fraud_rings": [],
+  "suspicious_clusters": [],
+  "high_degree_nodes": [],
+  "layout": "spring",
+  "color_scheme": {
+    "user": "#3498db",
+    "device": "#2ecc71",
+    "merchant": "#e74c3c",
+    "fraud_ring": "#e67e22",
+    "suspicious": "#f39c12"
+  }
+}

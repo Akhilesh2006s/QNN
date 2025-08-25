@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Analysis Test</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>CSV Analysis Test</h1>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span>Test Mode</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="upload-section">
+                <h2><i class="fas fa-upload"></i> Test CSV Upload</h2>
+                <div class="upload-area">
+                    <div class="file-upload">
+                        <input type="file" id="csv-file" accept=".csv" />
+                        <label for="csv-file">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Choose CSV file or drag & drop</span>
+                            <small>Try uploading sample_transactions.csv</small>
+                        </label>
+                    </div>
+                    <button id="analyze-csv" class="btn btn-primary" disabled>
+                        <i class="fas fa-play"></i> Test Analysis
+                    </button>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <h2><i class="fas fa-chart-line"></i> Test Results</h2>
+                
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Users</h3>
+                            <p id="total-users">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Transactions</h3>
+                            <p id="total-transactions">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Fraud Detected</h3>
+                            <p id="fraud-detected">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Suspicious</h3>
+                            <p id="suspicious-count">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Fraud Rate</h3>
+                            <p id="fraud-rate">0%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h3>Fraud Detection Results</h3>
+                        <canvas id="fraud-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Transaction Amount Distribution (₹)</h3>
+                        <canvas id="amount-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="results-table">
+                    <h3>Sample Results (First 10)</h3>
+                    <div class="table-container">
+                        <table id="results-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Amount (₹)</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Testing CSV Analysis...</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple test version
+        class CSVTest {
+            constructor() {
+                this.initializeElements();
+                this.bindEvents();
+            }
+
+            initializeElements() {
+                this.csvFileInput = document.getElementById('csv-file');
+                this.analyzeBtn = document.getElementById('analyze-csv');
+                this.resultsSection = document.getElementById('results-section');
+                this.loadingOverlay = document.getElementById('loading-overlay');
+                this.totalUsers = document.getElementById('total-users');
+                this.totalTransactions = document.getElementById('total-transactions');
+                this.fraudDetected = document.getElementById('fraud-detected');
+                this.suspiciousCount = document.getElementById('suspicious-count');
+                this.fraudRate = document.getElementById('fraud-rate');
+                this.resultsTbody = document.getElementById('results-tbody');
+            }
+
+            bindEvents() {
+                this.csvFileInput.addEventListener('change', (e) => {
+                    const file = e.target.files[0];
+                    if (file && file.type === 'text/csv') {
+                        this.analyzeBtn.disabled = false;
+                        this.analyzeBtn.textContent = `Test ${file.name}`;
+                    }
+                });
+
+                this.analyzeBtn.addEventListener('click', () => {
+                    this.testAnalysis();
+                });
+            }
+
+            async testAnalysis() {
+                const file = this.csvFileInput.files[0];
+                if (!file) return;
+
+                this.showLoading('Reading CSV file...');
+                
+                try {
+                    const csvText = await this.readFile(file);
+                    const data = this.parseCSV(csvText);
+                    
+                    this.showLoading('Running test analysis...');
+                    
+                    // Simulate analysis
+                    const results = this.simulateAnalysis(data);
+                    
+                    this.displayResults(results);
+                    this.createCharts(results);
+                    
+                } catch (error) {
+                    console.error('Test failed:', error);
+                    alert('Test failed: ' + error.message);
+                } finally {
+                    this.hideLoading();
+                }
+            }
+
+            readFile(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.onerror = reject;
+                    reader.readAsText(file);
+                });
+            }
+
+            parseCSV(csvText) {
+                const lines = csvText.split('\n');
+                const headers = lines[0].split(',').map(h => h.trim());
+                const data = [];
+
+                for (let i = 1; i < lines.length; i++) {
+                    if (lines[i].trim()) {
+                        const values = lines[i].split(',').map(v => v.trim());
+                        const row = {};
+                        headers.forEach((header, index) => {
+                            row[header] = values[index] || '';
+                        });
+                        data.push(row);
+                    }
+                }
+                return data;
+            }
+
+            simulateAnalysis(data) {
+                const results = {
+                    summary: {
+                        total_users: new Set(data.map(row => row.user_id)).size,
+                        total_transactions: data.length,
+                        fraud_detected: 0,
+                        fraud_rate: 0
+                    },
+                    transactions: []
+                };
+
+                data.forEach(row => {
+                    const amount = parseFloat(row.amount) || 0;
+                    const quantumRisk = Math.random() * 0.8 + (amount > 50000 ? 0.2 : 0);
+                    const traditionalRisk = Math.random() * 0.6 + (amount > 30000 ? 0.3 : 0);
+                    const finalRisk = quantumRisk * 0.7 + traditionalRisk * 0.3;
+                                    // Realistic fraud detection algorithm
+                let riskScore = 0;
+                let riskFactors = [];
+
+                // Amount-based risk
+                if (amount > 100000) {
+                    riskScore += 0.3;
+                    riskFactors.push('High amount');
+                } else if (amount > 50000) {
+                    riskScore += 0.2;
+                    riskFactors.push('Medium-high amount');
+                }
+
+                // Location-based risk
+                const highRiskLocations = ['Dubai', 'Cayman Islands', 'Singapore', 'Moscow', 'Mauritius', 'Bermuda', 'Monaco', 'Seychelles', 'Luxembourg', 'Panama'];
+                if (highRiskLocations.includes(location)) {
+                    riskScore += 0.4;
+                    riskFactors.push('High-risk location');
+                }
+
+                // Merchant-based risk
+                const highRiskMerchants = ['Offshore Bank', 'Crypto Exchange', 'Russian Bank', 'Investment Fund', 'Insurance Co', 'Casino', 'Offshore Services', 'Private Bank', 'Resort Booking'];
+                if (highRiskMerchants.includes(merchant)) {
+                    riskScore += 0.3;
+                    riskFactors.push('High-risk merchant');
+                }
+
+                // Add some randomness for realistic simulation
+                riskScore += Math.random() * 0.2;
+                riskScore = Math.min(1, riskScore);
+
+                const isFraud = riskScore > 0.65;
+                const maybeFraud = riskScore > 0.45 && riskScore <= 0.65;
+                    
+                    if (isFraud) results.summary.fraud_detected++;
+                    
+                    results.transactions.push({
+                        user_id: row.user_id,
+                        amount: amount,
+                        location: row.location || 'Unknown',
+                        merchant: row.merchant || 'Unknown',
+                        quantum_risk: quantumRisk,
+                        traditional_risk: traditionalRisk,
+                        final_risk: finalRisk,
+                        is_fraud: isFraud,
+                        maybe_fraud: maybeFraud,
+                        status: isFraud ? 'Fraud' : (maybeFraud ? 'Suspicious' : 'Legitimate')
+                    });
+                });
+
+                results.summary.fraud_rate = (results.summary.fraud_detected / results.summary.total_transactions) * 100;
+                return results;
+            }
+
+            displayResults(results) {
+                this.totalUsers.textContent = results.summary.total_users.toLocaleString();
+                this.totalTransactions.textContent = results.summary.total_transactions.toLocaleString();
+                this.fraudDetected.textContent = results.summary.fraud_detected.toLocaleString();
+                this.suspiciousCount.textContent = results.transactions.filter(t => t.maybe_fraud).length.toLocaleString();
+                this.fraudRate.textContent = `${results.summary.fraud_rate.toFixed(1)}%`;
+
+                this.updateResultsTable(results);
+                this.resultsSection.style.display = 'block';
+            }
+
+            updateResultsTable(results) {
+                this.resultsTbody.innerHTML = '';
+                const displayData = results.transactions.slice(0, 10);
+                
+                displayData.forEach(transaction => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${transaction.user_id}</td>
+                        <td>₹${transaction.amount.toLocaleString()}</td>
+                        <td>${transaction.location}</td>
+                        <td><span class="status-badge ${transaction.status.toLowerCase()}">${transaction.status}</span></td>
+                    `;
+                    this.resultsTbody.appendChild(row);
+                });
+            }
+
+            createCharts(results) {
+                this.createFraudChart(results);
+                this.createAmountChart(results);
+            }
+
+            createFraudChart(results) {
+                const ctx = document.getElementById('fraud-chart').getContext('2d');
+                const fraudCount = results.summary.fraud_detected;
+                const suspiciousCount = results.transactions.filter(t => t.maybe_fraud).length;
+                const legitimateCount = results.summary.total_transactions - fraudCount - suspiciousCount;
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Fraud', 'Suspicious', 'Legitimate'],
+                        datasets: [{
+                            data: [fraudCount, suspiciousCount, legitimateCount],
+                            backgroundColor: ['#ff4444', '#ffaa00', '#00ff88']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#ffffff' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            createAmountChart(results) {
+                const ctx = document.getElementById('amount-chart').getContext('2d');
+                const amounts = results.transactions.map(t => t.amount);
+                const ranges = [
+                    { min: 0, max: 10000, label: '₹0-10K' },
+                    { min: 10000, max: 50000, label: '₹10K-50K' },
+                    { min: 50000, max: 100000, label: '₹50K-1L' },
+                    { min: 100000, max: 500000, label: '₹1L-5L' },
+                    { min: 500000, max: Infinity, label: '₹5L+' }
+                ];
+
+                const data = ranges.map(range => 
+                    amounts.filter(amount => amount >= range.min && amount < range.max).length
+                );
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ranges.map(r => r.label),
+                        datasets: [{
+                            label: 'Transactions',
+                            data: data,
+                            backgroundColor: 'rgba(0, 212, 255, 0.6)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: { beginAtZero: true, ticks: { color: '#ffffff' } },
+                            x: { ticks: { color: '#ffffff' } }
+                        }
+                    }
+                });
+            }
+
+            showLoading(message = 'Processing...') {
+                this.loadingOverlay.querySelector('p').textContent = message;
+                this.loadingOverlay.classList.add('active');
+            }
+
+            hideLoading() {
+                this.loadingOverlay.classList.remove('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new CSVTest();
+        });
+    </script>
+</body>
+</html>

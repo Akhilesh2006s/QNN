@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum-Only Fraud Detection - CSV Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Quantum-Only Fraud Detection - CSV Analysis</h1>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span>Quantum Analysis Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <!-- CSV Upload Section -->
+            <section class="upload-section">
+                <h2><i class="fas fa-upload"></i> Upload Transaction CSV</h2>
+                <div class="upload-area">
+                    <div class="file-upload">
+                        <input type="file" id="csv-file" accept=".csv" />
+                        <label for="csv-file">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Choose CSV file or drag & drop</span>
+                            <small>Expected columns: user_id, amount, location, merchant, device_id, timestamp</small>
+                        </label>
+                    </div>
+                    <button id="analyze-csv" class="btn btn-primary" disabled>
+                        <i class="fas fa-play"></i> Analyze with Quantum-Only AI
+                    </button>
+                </div>
+            </section>
+
+            <!-- Analysis Results -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <h2><i class="fas fa-chart-line"></i> Analysis Results</h2>
+                
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Users</h3>
+                            <p id="total-users">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Transactions</h3>
+                            <p id="total-transactions">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Fraud Detected</h3>
+                            <p id="fraud-detected">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Suspicious</h3>
+                            <p id="suspicious-count">0</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Fraud Rate</h3>
+                            <p id="fraud-rate">0%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h3>Fraud Detection Results</h3>
+                        <canvas id="fraud-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Transaction Amount Distribution</h3>
+                        <canvas id="amount-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Location-based Risk Analysis</h3>
+                        <canvas id="location-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Quantum vs Traditional Risk Comparison</h3>
+                        <canvas id="risk-comparison-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Detailed Results Table -->
+                <div class="results-table">
+                    <h3>Detailed Analysis Results</h3>
+                    
+                    <!-- Search and Filter Controls -->
+                    <div class="table-controls">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-input" placeholder="Search transactions...">
+                        </div>
+                        <div class="filter-controls">
+                            <select id="status-filter">
+                                <option value="">All Status</option>
+                                <option value="Fraud">Fraud</option>
+                                <option value="Suspicious">Suspicious</option>
+                                <option value="Legitimate">Legitimate</option>
+                            </select>
+                            <select id="location-filter">
+                                <option value="">All Locations</option>
+                            </select>
+                            <select id="merchant-filter">
+                                <option value="">All Merchants</option>
+                            </select>
+                        </div>
+                        <div class="table-info">
+                            <span id="table-info">Showing all transactions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="results-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Amount (₹)</th>
+                                    <th>Location</th>
+                                    <th>Merchant</th>
+                                    <th>Risk Score</th>
+                                    <th>Risk Factors</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Analyzing with Quantum-Only AI...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

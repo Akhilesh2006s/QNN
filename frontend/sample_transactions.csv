@@ -1,0 +1,22 @@
+user_id,amount,location,merchant,device_id,timestamp
+user_001,15000,Mumbai,Amazon,device_001,2024-01-15T10:30:00
+user_002,50000,Dubai,Unknown,device_002,2024-01-15T11:15:00
+user_003,250000,Cayman Islands,Offshore Bank,device_003,2024-01-15T12:00:00
+user_004,8000,Delhi,Flipkart,device_004,2024-01-15T13:45:00
+user_005,120000,Singapore,Crypto Exchange,device_005,2024-01-15T14:20:00
+user_006,5000,Bangalore,PayTM,device_006,2024-01-15T15:10:00
+user_007,75000,Moscow,Russian Bank,device_007,2024-01-15T16:30:00
+user_008,3000,Chennai,PhonePe,device_008,2024-01-15T17:00:00
+user_009,180000,Panama,Offshore Services,device_009,2024-01-15T18:15:00
+user_010,12000,Kolkata,Google Pay,device_010,2024-01-15T19:30:00
+user_011,95000,Mauritius,Investment Fund,device_011,2024-01-15T20:45:00
+user_012,4000,Hyderabad,UPI,device_012,2024-01-15T21:00:00
+user_013,300000,Bermuda,Insurance Co,device_013,2024-01-15T22:15:00
+user_014,7000,Pune,Net Banking,device_014,2024-01-15T23:30:00
+user_015,150000,Monaco,Casino,device_015,2024-01-16T00:45:00
+user_016,6000,Ahmedabad,Digital Wallet,device_016,2024-01-16T01:00:00
+user_017,220000,Seychelles,Resort Booking,device_017,2024-01-16T02:15:00
+user_018,9000,Indore,Online Shopping,device_018,2024-01-16T03:30:00
+user_019,180000,Luxembourg,Private Bank,device_019,2024-01-16T04:45:00
+user_020,3500,Bhopal,Local Merchant,device_020,2024-01-16T05:00:00
+

@@ -1,0 +1,11 @@
+amount,user_id,location,merchant,user_balance,user_age,payment_method,device
+5000,user_1,Mumbai,Amazon India,50000,30,Credit Card,Mobile
+15000,user_2,Delhi,Flipkart,75000,25,UPI,Desktop
+8000,user_3,Bangalore,Swiggy,100000,28,Debit Card,Mobile
+25000,user_4,Chennai,Netflix,125000,35,Credit Card,Desktop
+12000,user_5,Kolkata,Spotify,150000,22,UPI,Mobile
+
+
+
+
+

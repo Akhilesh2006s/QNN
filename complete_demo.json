@@ -1,0 +1,1453 @@
+{
+  "nodes": [
+    {
+      "id": "fraud_user_1",
+      "type": "user",
+      "x": -49.52149921902086,
+      "y": 44.088527500278516,
+      "size": 15,
+      "color": "#3498db",
+      "label": "fraud_user_1",
+      "risk_score": 0.2,
+      "amount": 734,
+      "location": "Delhi",
+      "connections": 3
+    },
+    {
+      "id": "suspicious_device_1",
+      "type": "device",
+      "x": -11.586684569229723,
+      "y": 96.85282725107764,
+      "size": 20,
+      "color": "#2ecc71",
+      "label": "suspicious_device_1",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 4
+    },
+    {
+      "id": "suspicious_merchant_1",
+      "type": "merchant",
+      "x": -63.23761717182058,
+      "y": 41.48411886060342,
+      "size": 20,
+      "color": "#e74c3c",
+      "label": "suspicious_merchant_1",
+      "risk_score": 0.8,
+      "amount": 0,
+      "location": "",
+      "connections": 4
+    },
+    {
+      "id": "legitimate_merchant_1",
+      "type": "merchant",
+      "x": -64.96691390369328,
+      "y": 48.6810275420823,
+      "size": 20,
+      "color": "#e74c3c",
+      "label": "legitimate_merchant_1",
+      "risk_score": 0.2,
+      "amount": 0,
+      "location": "",
+      "connections": 4
+    },
+    {
+      "id": "fraud_user_2",
+      "type": "user",
+      "x": -48.08077412087857,
+      "y": 33.508374160123665,
+      "size": 15,
+      "color": "#3498db",
+      "label": "fraud_user_2",
+      "risk_score": 0.2,
+      "amount": 642,
+      "location": "Delhi",
+      "connections": 3
+    },
+    {
+      "id": "fraud_user_3",
+      "type": "user",
+      "x": -74.57972193051296,
+      "y": 39.8384340906518,
+      "size": 15,
+      "color": "#3498db",
+      "label": "fraud_user_3",
+      "risk_score": 0.2,
+      "amount": 750,
+      "location": "Delhi",
+      "connections": 3
+    },
+    {
+      "id": "fraud_user_4",
+      "type": "user",
+      "x": -82.37473473330851,
+      "y": 51.72169759251245,
+      "size": 15,
+      "color": "#3498db",
+      "label": "fraud_user_4",
+      "risk_score": 0.2,
+      "amount": 451,
+      "location": "Delhi",
+      "connections": 3
+    },
+    {
+      "id": "fraud_user_5",
+      "type": "user",
+      "x": -18.69437452976571,
+      "y": 96.2436183836581,
+      "size": 10,
+      "color": "#3498db",
+      "label": "fraud_user_5",
+      "risk_score": 0.9,
+      "amount": 1104,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_fraud_user_5",
+      "type": "device",
+      "x": -93.3191201445097,
+      "y": -4.7764098392090215,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_fraud_user_5",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "high_risk_merchant",
+      "type": "merchant",
+      "x": -6.901237831014129,
+      "y": 77.10203667993389,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "high_risk_merchant",
+      "risk_score": 0.9,
+      "amount": 0,
+      "location": "",
+      "connections": 2
+    },
+    {
+      "id": "fraud_user_6",
+      "type": "user",
+      "x": 3.7752871901560736,
+      "y": 64.72326280090542,
+      "size": 10,
+      "color": "#3498db",
+      "label": "fraud_user_6",
+      "risk_score": 0.9,
+      "amount": 1022,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_fraud_user_6",
+      "type": "device",
+      "x": -95.62422771381877,
+      "y": -18.335382980883548,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_fraud_user_6",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_0",
+      "type": "user",
+      "x": -70.80722502866169,
+      "y": -1.0492160495752247,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_0",
+      "risk_score": 0.26651388533282866,
+      "amount": 170,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_0",
+      "type": "device",
+      "x": -79.75037686377733,
+      "y": -13.413699640333189,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_0",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_0",
+      "type": "merchant",
+      "x": -92.42661845459648,
+      "y": -36.935800737466955,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_0",
+      "risk_score": 0.26651388533282866,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_1",
+      "type": "user",
+      "x": -71.0083448468489,
+      "y": 68.13588474905448,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_1",
+      "risk_score": 0.2991465742728314,
+      "amount": 227,
+      "location": "Mumbai",
+      "connections": 2
+    },
+    {
+      "id": "device_1",
+      "type": "device",
+      "x": 0.5058088949971445,
+      "y": 100.0,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_1",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_1",
+      "type": "merchant",
+      "x": -78.5062409675914,
+      "y": 61.465290409407004,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_1",
+      "risk_score": 0.2991465742728314,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_2",
+      "type": "user",
+      "x": 55.14639471628149,
+      "y": 49.46996659664901,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_2",
+      "risk_score": 0.18308397459691647,
+      "amount": 390,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_2",
+      "type": "device",
+      "x": 36.19620953787504,
+      "y": -94.96023713409531,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_2",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_2",
+      "type": "merchant",
+      "x": 85.1811167679544,
+      "y": 54.60014953171128,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_2",
+      "risk_score": 0.18308397459691647,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_3",
+      "type": "user",
+      "x": -58.04101269026509,
+      "y": -65.92636924153227,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_3",
+      "risk_score": 0.2356585878634118,
+      "amount": 263,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_3",
+      "type": "device",
+      "x": 55.63536768238525,
+      "y": 80.92264965604264,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_3",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_3",
+      "type": "merchant",
+      "x": -33.01441692296466,
+      "y": -44.09067405571877,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_3",
+      "risk_score": 0.2356585878634118,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_4",
+      "type": "user",
+      "x": 92.8161954748577,
+      "y": 4.28462870700288,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_4",
+      "risk_score": 0.27296592803180353,
+      "amount": 294,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_4",
+      "type": "device",
+      "x": 86.07291405944724,
+      "y": -20.968696007359803,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_4",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_4",
+      "type": "merchant",
+      "x": 89.08944754563632,
+      "y": -28.537483286564708,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_4",
+      "risk_score": 0.27296592803180353,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_5",
+      "type": "user",
+      "x": 36.325236970989685,
+      "y": 95.47644553843584,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_5",
+      "risk_score": 0.27372008866655406,
+      "amount": 161,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_5",
+      "type": "device",
+      "x": 71.59735977226545,
+      "y": 75.13597392648867,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_5",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_5",
+      "type": "merchant",
+      "x": 10.640669596577553,
+      "y": 42.74446293493349,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_5",
+      "risk_score": 0.27372008866655406,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_6",
+      "type": "user",
+      "x": 32.440689134358585,
+      "y": -95.30211857544747,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_6",
+      "risk_score": 0.2854766217173677,
+      "amount": 172,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_6",
+      "type": "device",
+      "x": 2.9831704327610984,
+      "y": -91.91032350289645,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_6",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_6",
+      "type": "merchant",
+      "x": 64.84817003800877,
+      "y": -56.021497867848005,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_6",
+      "risk_score": 0.2854766217173677,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_7",
+      "type": "user",
+      "x": 93.8909922188757,
+      "y": -44.32340092263941,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_7",
+      "risk_score": 0.1653162437431122,
+      "amount": 199,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_7",
+      "type": "device",
+      "x": 56.72741628161134,
+      "y": -67.05559587585887,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_7",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_7",
+      "type": "merchant",
+      "x": 98.57502847648838,
+      "y": -5.5638439242963305,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_7",
+      "risk_score": 0.1653162437431122,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_8",
+      "type": "user",
+      "x": 70.4565858371172,
+      "y": -67.38414864563146,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_8",
+      "risk_score": 0.11296636623717345,
+      "amount": 166,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_8",
+      "type": "device",
+      "x": 93.15024514181003,
+      "y": -26.611206733011773,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_8",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_8",
+      "type": "merchant",
+      "x": 30.954153099979326,
+      "y": -62.99662167472171,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_8",
+      "risk_score": 0.11296636623717345,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_9",
+      "type": "user",
+      "x": -59.16866848513563,
+      "y": 23.90697867485038,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_9",
+      "risk_score": 0.21338891791665016,
+      "amount": 212,
+      "location": "Mumbai",
+      "connections": 2
+    },
+    {
+      "id": "device_9",
+      "type": "device",
+      "x": 9.469749409687376,
+      "y": 93.64272875642855,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_9",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_9",
+      "type": "merchant",
+      "x": -66.66659634652916,
+      "y": 72.1554281052423,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_9",
+      "risk_score": 0.21338891791665016,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_10",
+      "type": "user",
+      "x": 35.266799944283385,
+      "y": 71.95638751126351,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_10",
+      "risk_score": 0.12909775351099054,
+      "amount": 338,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_10",
+      "type": "device",
+      "x": 82.7518649589736,
+      "y": 18.13864495350529,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_10",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_10",
+      "type": "merchant",
+      "x": 54.68359306237639,
+      "y": 61.87145537739321,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_10",
+      "risk_score": 0.12909775351099054,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_11",
+      "type": "user",
+      "x": -93.57546910931175,
+      "y": 0.939640618882292,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_11",
+      "risk_score": 0.19468336419849597,
+      "amount": 334,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_11",
+      "type": "device",
+      "x": 97.6441282730574,
+      "y": -11.228257760938156,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_11",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_11",
+      "type": "merchant",
+      "x": -63.64961046853503,
+      "y": -15.539532637409811,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_11",
+      "risk_score": 0.19468336419849597,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_12",
+      "type": "user",
+      "x": 34.03265248918236,
+      "y": -63.918132130855234,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_12",
+      "risk_score": 0.24347015782334905,
+      "amount": 310,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_12",
+      "type": "device",
+      "x": -45.43401585239235,
+      "y": -80.39868979264413,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_12",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_12",
+      "type": "merchant",
+      "x": 21.3030014574405,
+      "y": -94.22946792016324,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_12",
+      "risk_score": 0.24347015782334905,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_13",
+      "type": "user",
+      "x": 79.80501464393951,
+      "y": -9.954897730880539,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_13",
+      "risk_score": 0.17982712015688723,
+      "amount": 389,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_13",
+      "type": "device",
+      "x": 80.14954862559635,
+      "y": 62.70051784589741,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_13",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_13",
+      "type": "merchant",
+      "x": 72.71468625548837,
+      "y": -0.876493276368307,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_13",
+      "risk_score": 0.17982712015688723,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_14",
+      "type": "user",
+      "x": 44.40786982593847,
+      "y": 63.30744475751266,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_14",
+      "risk_score": 0.1724332059766785,
+      "amount": 343,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_14",
+      "type": "device",
+      "x": 23.79420379173979,
+      "y": 95.0198862443882,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_14",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_14",
+      "type": "merchant",
+      "x": 32.15764445506235,
+      "y": 38.696745230411764,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_14",
+      "risk_score": 0.1724332059766785,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_15",
+      "type": "user",
+      "x": 3.0111464518241315,
+      "y": -79.36928943261026,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_15",
+      "risk_score": 0.1258031779788084,
+      "amount": 208,
+      "location": "Chennai",
+      "connections": 2
+    },
+    {
+      "id": "device_15",
+      "type": "device",
+      "x": -89.21277062424276,
+      "y": -55.47489657153858,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_15",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_15",
+      "type": "merchant",
+      "x": -23.157859869291478,
+      "y": -99.61877456802516,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_15",
+      "risk_score": 0.1258031779788084,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_16",
+      "type": "user",
+      "x": 30.62486586393533,
+      "y": 23.93156960936041,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_16",
+      "risk_score": 0.17458400029753887,
+      "amount": 295,
+      "location": "Mumbai",
+      "connections": 2
+    },
+    {
+      "id": "device_16",
+      "type": "device",
+      "x": 57.62446594158624,
+      "y": -83.32073189417166,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_16",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_16",
+      "type": "merchant",
+      "x": 57.718484737495444,
+      "y": 27.705178775768267,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_16",
+      "risk_score": 0.17458400029753887,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_17",
+      "type": "user",
+      "x": 38.8800926935648,
+      "y": -97.18779121571936,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_17",
+      "risk_score": 0.17605592519360236,
+      "amount": 185,
+      "location": "Mumbai",
+      "connections": 2
+    },
+    {
+      "id": "device_17",
+      "type": "device",
+      "x": -95.40250530655878,
+      "y": -30.187425406515423,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_17",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_17",
+      "type": "merchant",
+      "x": -3.4522449123983288,
+      "y": -92.26032552198313,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_17",
+      "risk_score": 0.17605592519360236,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_18",
+      "type": "user",
+      "x": -35.642207336931314,
+      "y": -91.19750590192638,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_18",
+      "risk_score": 0.22981716224876517,
+      "amount": 281,
+      "location": "Delhi",
+      "connections": 2
+    },
+    {
+      "id": "device_18",
+      "type": "device",
+      "x": -78.84022015829052,
+      "y": -67.2013396145431,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_18",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_18",
+      "type": "merchant",
+      "x": -52.74315207482193,
+      "y": -85.56527191399735,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_18",
+      "risk_score": 0.22981716224876517,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "legit_user_19",
+      "type": "user",
+      "x": -97.758205817112,
+      "y": 19.965663497818685,
+      "size": 10,
+      "color": "#3498db",
+      "label": "legit_user_19",
+      "risk_score": 0.26402460051273247,
+      "amount": 378,
+      "location": "Bangalore",
+      "connections": 2
+    },
+    {
+      "id": "device_19",
+      "type": "device",
+      "x": 45.203747025193636,
+      "y": -86.18093975321484,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "device_19",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "merchant_19",
+      "type": "merchant",
+      "x": -83.25758734918443,
+      "y": 34.02096162215856,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "merchant_19",
+      "risk_score": 0.26402460051273247,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "bot_user_001",
+      "type": "user",
+      "x": -36.299256039118674,
+      "y": 67.56101833542472,
+      "size": 10,
+      "color": "#3498db",
+      "label": "bot_user_001",
+      "risk_score": 0.3,
+      "amount": 1550,
+      "location": "Mumbai",
+      "connections": 2
+    },
+    {
+      "id": "bot_device_001",
+      "type": "device",
+      "x": -8.408976342854684,
+      "y": -96.19233709616472,
+      "size": 10,
+      "color": "#2ecc71",
+      "label": "bot_device_001",
+      "risk_score": 0,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    },
+    {
+      "id": "Online Store",
+      "type": "merchant",
+      "x": -43.14153104181154,
+      "y": 84.0652000069017,
+      "size": 10,
+      "color": "#e74c3c",
+      "label": "Online Store",
+      "risk_score": 0.3,
+      "amount": 0,
+      "location": "",
+      "connections": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "fraud_user_1",
+      "target": "suspicious_device_1",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "fraud_user_1",
+      "target": "suspicious_merchant_1",
+      "weight": 987,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "fraud_user_1",
+      "target": "legitimate_merchant_1",
+      "weight": 734,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "suspicious_device_1",
+      "target": "fraud_user_2",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "suspicious_device_1",
+      "target": "fraud_user_3",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "suspicious_device_1",
+      "target": "fraud_user_4",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "suspicious_merchant_1",
+      "target": "fraud_user_2",
+      "weight": 1486,
+      "transaction_count": 1,
+      "width": 1.486
+    },
+    {
+      "source": "suspicious_merchant_1",
+      "target": "fraud_user_3",
+      "weight": 807,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "suspicious_merchant_1",
+      "target": "fraud_user_4",
+      "weight": 1060,
+      "transaction_count": 1,
+      "width": 1.06
+    },
+    {
+      "source": "legitimate_merchant_1",
+      "target": "fraud_user_2",
+      "weight": 642,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legitimate_merchant_1",
+      "target": "fraud_user_3",
+      "weight": 750,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legitimate_merchant_1",
+      "target": "fraud_user_4",
+      "weight": 451,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "fraud_user_5",
+      "target": "device_fraud_user_5",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "fraud_user_5",
+      "target": "high_risk_merchant",
+      "weight": 1104,
+      "transaction_count": 1,
+      "width": 1.104
+    },
+    {
+      "source": "high_risk_merchant",
+      "target": "fraud_user_6",
+      "weight": 1022,
+      "transaction_count": 1,
+      "width": 1.022
+    },
+    {
+      "source": "fraud_user_6",
+      "target": "device_fraud_user_6",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_0",
+      "target": "device_0",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_0",
+      "target": "merchant_0",
+      "weight": 170,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_1",
+      "target": "device_1",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_1",
+      "target": "merchant_1",
+      "weight": 227,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_2",
+      "target": "device_2",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_2",
+      "target": "merchant_2",
+      "weight": 390,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_3",
+      "target": "device_3",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_3",
+      "target": "merchant_3",
+      "weight": 263,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_4",
+      "target": "device_4",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_4",
+      "target": "merchant_4",
+      "weight": 294,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_5",
+      "target": "device_5",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_5",
+      "target": "merchant_5",
+      "weight": 161,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_6",
+      "target": "device_6",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_6",
+      "target": "merchant_6",
+      "weight": 172,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_7",
+      "target": "device_7",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_7",
+      "target": "merchant_7",
+      "weight": 199,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_8",
+      "target": "device_8",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_8",
+      "target": "merchant_8",
+      "weight": 166,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_9",
+      "target": "device_9",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_9",
+      "target": "merchant_9",
+      "weight": 212,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_10",
+      "target": "device_10",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_10",
+      "target": "merchant_10",
+      "weight": 338,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_11",
+      "target": "device_11",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_11",
+      "target": "merchant_11",
+      "weight": 334,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_12",
+      "target": "device_12",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_12",
+      "target": "merchant_12",
+      "weight": 310,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_13",
+      "target": "device_13",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_13",
+      "target": "merchant_13",
+      "weight": 389,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_14",
+      "target": "device_14",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_14",
+      "target": "merchant_14",
+      "weight": 343,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_15",
+      "target": "device_15",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_15",
+      "target": "merchant_15",
+      "weight": 208,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_16",
+      "target": "device_16",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_16",
+      "target": "merchant_16",
+      "weight": 295,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_17",
+      "target": "device_17",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_17",
+      "target": "merchant_17",
+      "weight": 185,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_18",
+      "target": "device_18",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_18",
+      "target": "merchant_18",
+      "weight": 281,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_19",
+      "target": "device_19",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "legit_user_19",
+      "target": "merchant_19",
+      "weight": 378,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "bot_user_001",
+      "target": "bot_device_001",
+      "weight": 1,
+      "transaction_count": 1,
+      "width": 1
+    },
+    {
+      "source": "bot_user_001",
+      "target": "Online Store",
+      "weight": 1550,
+      "transaction_count": 1,
+      "width": 1.55
+    }
+  ],
+  "graph_stats": {
+    "total_nodes": 75,
+    "total_edges": 58,
+    "density": 0.020900900900900903,
+    "connected_components": 23
+  },
+  "fraud_rings": [
+    {
+      "users": [
+        "fraud_user_2",
+        "fraud_user_4",
+        "fraud_user_1",
+        "fraud_user_3"
+      ],
+      "devices": [
+        "suspicious_device_1"
+      ],
+      "merchants": [
+        "legitimate_merchant_1",
+        "suspicious_merchant_1"
+      ],
+      "size": 7,
+      "user_count": 4,
+      "device_count": 1,
+      "merchant_count": 2,
+      "shared_devices": true,
+      "shared_merchants": true,
+      "user_device_ratio": 4.0,
+      "user_merchant_ratio": 2.0,
+      "suspicious_score": 2.4000000000000004,
+      "is_fraud_ring": true
+    },
+    {
+      "users": [
+        "fraud_user_6",
+        "fraud_user_5"
+      ],
+      "devices": [
+        "device_fraud_user_5",
+        "device_fraud_user_6"
+      ],
+      "merchants": [
+        "high_risk_merchant"
+      ],
+      "size": 5,
+      "user_count": 2,
+      "device_count": 2,
+      "merchant_count": 1,
+      "shared_devices": false,
+      "shared_merchants": true,
+      "user_device_ratio": 1.0,
+      "user_merchant_ratio": 2.0,
+      "suspicious_score": 0.8,
+      "is_fraud_ring": true
+    }
+  ],
+  "suspicious_clusters": [],
+  "high_degree_nodes": [],
+  "layout": "spring",
+  "color_scheme": {
+    "user": "#3498db",
+    "device": "#2ecc71",
+    "merchant": "#e74c3c",
+    "fraud_ring": "#e67e22",
+    "suspicious": "#f39c12"
+  }
+}

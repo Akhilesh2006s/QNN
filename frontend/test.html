@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Fraud Detection - Test</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Quantum Fraud Detection - Test Mode</h1>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span>Frontend Test Mode</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="control-panel">
+                <h2><i class="fas fa-cogs"></i> Test Controls</h2>
+                <div class="controls">
+                    <div class="control-group">
+                        <button id="test-transaction" class="btn btn-primary">
+                            <i class="fas fa-play"></i> Test Transaction Analysis
+                        </button>
+                    </div>
+                    <div class="control-group">
+                        <button id="test-demo" class="btn btn-success">
+                            <i class="fas fa-rocket"></i> Test Demo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div class="result-card fraud-result" id="fraud-result">
+                    <div class="result-header">
+                        <h3>Test Results</h3>
+                    </div>
+                    <div class="result-content">
+                        <div id="test-output">
+                            <p>Click the test buttons above to see the frontend in action!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Simple test script
+        document.getElementById('test-transaction').addEventListener('click', function() {
+            const output = document.getElementById('test-output');
+            output.innerHTML = `
+                <h4>✅ Transaction Analysis Test</h4>
+                <p>Frontend is working correctly!</p>
+                <ul>
+                    <li>✅ JavaScript loaded successfully</li>
+                    <li>✅ CSS styles applied</li>
+                    <li>✅ Event handlers working</li>
+                    <li>✅ DOM manipulation functional</li>
+                </ul>
+                <p><strong>Status:</strong> Frontend ready for backend integration</p>
+            `;
+        });
+
+        document.getElementById('test-demo').addEventListener('click', function() {
+            const output = document.getElementById('test-output');
+            output.innerHTML = `
+                <h4>🚀 Demo Test</h4>
+                <p>Demo functionality would connect to backend API</p>
+                <ul>
+                    <li>📡 Would call /api/demo endpoint</li>
+                    <li>🔍 Would run quantum fraud detection</li>
+                    <li>📊 Would display real results</li>
+                    <li>⚡ Would show live updates</li>
+                </ul>
+                <p><strong>Next Step:</strong> Start Flask server to enable full functionality</p>
+            `;
+        });
+    </script>
+</body>
+</html>
+
